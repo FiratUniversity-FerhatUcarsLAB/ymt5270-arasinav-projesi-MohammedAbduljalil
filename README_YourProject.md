@@ -1,19 +1,21 @@
 # YMT5270 Midterm Project: Data Analysis and Machine Learning with Orange
 
 ## Student Information
-- **Name Surname:** [Student Name Surname]
-- **Student ID:** [Student ID]
-- **Email:** [Student Email Address]
+- **Name Surname:** [Mohammed Abduljalil Ahmed]
+- **Student ID:** [231137132]
+- **Email:** [231137132@firat,edu.tr]
 
 ## Project Summary
-This project encompasses data analysis and machine learning applications on historical stock price data of Zoom (ZM). The dataset includes daily price movements and technical indicators for Zoom and the NASDAQ market. It was chosen because financial data offers potential for predicting price movements using machine learning, and Zoom’s popularity during the pandemic makes it compelling. Using Orange, exploratory data analysis (EDA), data preprocessing, visualization, and classification models were applied. Basic statistics, correlation analyses, and various visualizations were used to explore the dataset’s structure. A classification approach was employed to predict the two-day price movement direction (Label (2D)). Logistic Regression and Random Forest models were tested, with performance evaluated using metrics like accuracy and F1 score. The results suggest that the models partially succeeded in capturing the complexity of financial data, but the noisy nature of the data indicates a need for further optimization.
-
+This project encompasses data analysis and machine learning applications on historical stock price data of Zoom (ZM). The dataset includes daily price movements and technical indicators for Zoom and the NASDAQ market. It was chosen because financial data offers potential for predicting price movements using machine learning, and Zoom’s popularity during the pandemic makes it compelling. Using Orange, exploratory data analysis (EDA), data preprocessing, visualization, and classification models were applied. Basic statistics, correlation analyses, and various visualizations were used to explore the dataset’s structure. A classification approach was employed to predict the two-day price movement direction (Label (2D)). Random Forest, SVM, and Logistic Regression models were tested, with performance evaluated using metrics like accuracy and F1 score. The results suggest that the models partially succeeded in capturing the complexity of financial data, but the noisy nature of the data indicates a need for further optimization.
+## Final project shape
+Here is the final shape of the orange project
+![Orange Workflow Screenshot](https://raw.githubusercontent.com/your-username/your-repo-name/main/orange_workflow.png)
 ## Data Set
 
 ### Data Set Information
 - **Data Set Name:** Zoom Historical Data
-- **Source:** [Not specified; for example, if sourced from Yahoo Finance or another platform, please add here]
-- **License:** Not specified
+- **Source:** [https://www.macrotrends.net/stocks/charts/ZM/zoom-communications/stock-price-history]
+- 
 - **Data Set Size:**
   - Training set: 353 rows, 12 columns
   - Test set: 4 rows, 11 columns (Label (2D) is only present in the training set)
@@ -77,36 +79,81 @@ The following preprocessing steps were applied to the dataset:
 ## Machine Learning Application
 
 ### Method Used
-A classification method was employed because the target variable (Label (2D)) is a binary categorical variable (0 or 1). The goal is to predict the two-day price movement direction of Zoom stock. Classification is suitable for capturing patterns in financial data.
+A classification method was employed because the target variable (Label (2D)) is a binary categorical variable (0 or 1). The goal is to predict the two-day price movement direction of Zoom stock (down/stable or up). Classification is suitable for capturing patterns in financial data.
 
 ### Models and Parameters
-The following models were tested in Orange:
+The following models were tested in Orange, as shown in the workflow:
 1. **Logistic Regression**:
-   - Parameters: Default (L2 regularization, C=1)
-   - Widget Settings: The “Logistic Regression” widget was used with default settings.
+   - **Parameters**: Default settings (L2 regularization, C=1)
+   - **Widget Settings**: The “Logistic Regression” widget was used with default settings.
 2. **Random Forest**:
-   - Parameters: Number of trees=100, maximum depth=5
-   - Widget Settings: The “Random Forest” widget was configured with manual settings for tree count and depth.
-- [Screenshot: `model_settings.png`]
+   - **Parameters**: Number of trees=100, maximum depth=5 (assumed based on typical settings; please confirm if different)
+   - **Widget Settings**: The “Random Forest” widget was configured with manual settings for tree count and depth.
+3. **SVM**:
+   - **Parameters**: Default settings (kernel=RBF, C=1, gamma=auto; please confirm if different)
+   - **Widget Settings**: The “SVM” widget was used with default settings.
+
+[Orange screenshot: `model_settings.png`]
 
 ### Model Evaluation
-The models were evaluated using Orange’s “Test & Score” widget with 5-fold cross-validation. The metrics used are:
+The models were evaluated using Orange’s “Test and Score” widget with 5-fold cross-validation. The evaluation metrics and results are as follows:
 
-| Metric         | Logistic Regression | Random Forest |
-|----------------|---------------------|---------------|
-| Accuracy       | 0.65                | 0.68          |
-| F1 Score       | 0.60                | 0.64          |
-| Precision      | 0.62                | 0.66          |
-| Recall         | 0.58                | 0.62          |
+| Metric         | Logistic Regression | Random Forest | SVM   |
+|----------------|---------------------|---------------|-------|
+| Accuracy (CA)  | 0.586               | 0.489         | 0.575 |
+| F1 Score       | 0.434               | 0.485         | 0.487 |
+| Precision      | 0.344               | 0.483         | 0.528 |
+| Recall         | 0.586               | 0.489         | 0.575 |
+| AUC            | 0.431               | 0.470         | 0.488 |
+| MCC            | 0.000               | -0.066        | 0.017 |
 
-- [Screenshot: `test_score.png`]
+[Orange screenshot: `test_score.png`]
+
+#### Evaluation Visualizations
+The following visualizations were created to evaluate and interpret model performance:
+1. **Confusion Matrix**:
+   - **Description**: A confusion matrix for each model was generated using Orange’s “Confusion Matrix” widget to show true positives, false positives, true negatives, and false negatives.
+   - **Comment**: [Interpret, e.g., The matrix for SVM likely shows a balanced performance with a slight edge in precision (0.528), but further details are needed to assess false positives/negatives.]
+   - [Image: `confusion_matrix.png`]
+2. **Feature Ranking (via Rank Widget)**:
+   - **Description**: Feature importance was visualized using Orange’s “Rank” widget, which ranks features based on their predictive power.
+   - **Comment**: [Interpret, e.g., Features like ZM HL PCT and ZM OC PCT were ranked highest, suggesting that intraday volatility and daily price changes are key drivers of predictions.]
+   - [Image: `feature_rank.png`]
 
 ### Interpretation of Results
-- **Strengths**: Random Forest slightly outperformed Logistic Regression, likely due to its ability to capture complex relationships. Both models provide basic predictive power.
-- **Weaknesses**: The noisy nature of financial data limits model accuracy (~65-68%). Class imbalance (Label (2D): ~60% 0, ~40% 1) negatively impacts performance.
-- **Alternative Models**: Models like SVM, Gradient Boosting, or Neural Networks could be explored. Additionally, further feature engineering might improve results.
+- **Strengths**: Logistic Regression achieved the highest accuracy (58.6%), followed closely by SVM (57.5%). SVM also showed the highest precision (0.528) and AUC (0.488), indicating better discriminative ability compared to the other models. Random Forest had a balanced F1 score (0.485), suggesting it handles the trade-off between precision and recall relatively well.
+- **Weaknesses**: All models performed poorly overall, with accuracies below 60% and AUC values below 0.5, indicating performance close to random guessing. The negative MCC for Random Forest (-0.066) and near-zero MCC for Logistic Regression (0.000) and SVM (0.017) highlight the impact of class imbalance (Label (2D): ~60% 0, ~40% 1) and the noisy nature of financial data. The small test set size (4 rows) further limits robust evaluation, as seen in the evaluation metrics.
+- **Alternative Models**: Models like Gradient Boosting, Neural Networks, or ensemble methods could be explored to improve performance. Additional features (e.g., market sentiment, external economic indicators) or advanced preprocessing techniques (e.g., SMOTE to address class imbalance) might enhance predictive accuracy.
 
+## Orange Workflow
 
+### Workflow Description
+The Orange workflow was designed to load, preprocess, analyze, and model the Zoom Historical Data for predicting two-day price movements. Below is a description of the workflow components and their connections, as visualized in the Orange canvas:
+
+- **Data Loading**:
+  - Two “File” widgets were used to load the training and test datasets (353 rows and 4 rows, respectively).
+  - “Select Columns” widgets were connected to each “File” widget to select relevant features (e.g., excluding Date, focusing on price and volume features).
+
+- **Exploratory Analysis**:
+  - A “Rank” widget was connected to the training data to rank features by importance, aiding in understanding which features (e.g., ZM HL PCT, ZM OC PCT) contribute most to predictions.
+  - A “Distributions” widget was used to visualize the distribution of features, providing insights into their spread and potential skewness.
+
+- **Modeling**:
+  - Three models were implemented: Random Forest, SVM, and Logistic Regression, each connected as a learner to the “Test and Score” widget.
+  - The Random Forest model was further analyzed using a “Tree” widget and a “Tree Viewer” widget to visualize the decision tree structure.
+
+- **Evaluation**:
+  - The “Test and Score” widget evaluated the models using the training data, producing metrics like accuracy, F1 score, precision, and recall.
+  - A “Confusion Matrix” widget was connected to the “Test and Score” widget to visualize model performance in terms of true positives, false positives, etc.
+  - A “Predictions” widget was used to generate predictions, with an additional “SVM (1)” widget for a separate SVM prediction step.
+
+- **Data Visualization**:
+  - “Data Table” widgets were used to view the raw data and predictions, providing a tabular view of inputs and outputs.
+
+[Orange workflow screenshot: `orange_workflow.png`]
+
+### Workflow Interpretation
+The workflow effectively combines data preprocessing, exploratory analysis, modeling, and evaluation. The use of “Rank” and “Distributions” widgets enhances understanding of feature importance and data characteristics, guiding model selection. The inclusion of multiple models (Random Forest, SVM, Logistic Regression) allows for comparative analysis, while the “Confusion Matrix” provides a detailed view of classification performance. The small test set size (4 rows) limits robust evaluation, but the workflow provides a solid foundation for further experimentation.
 
 # YMT5270 Ara Sınav Projesi: Orange ile Veri Analizi ve Makine Öğrenmesi
 
