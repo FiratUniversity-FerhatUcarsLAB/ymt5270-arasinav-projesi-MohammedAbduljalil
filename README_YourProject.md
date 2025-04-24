@@ -93,7 +93,6 @@ The following models were tested in Orange, as shown in the workflow:
    - **Parameters**: Default settings (kernel=RBF, C=1, gamma=auto; please confirm if different)
    - **Widget Settings**: The “SVM” widget was used with default settings.
 
-[Orange screenshot: `model_settings.png`]
 
 ### Model Evaluation
 The models were evaluated using Orange’s “Test and Score” widget with 5-fold cross-validation. The evaluation metrics and results are as follows:
@@ -107,7 +106,7 @@ The models were evaluated using Orange’s “Test and Score” widget with 5-fo
 | AUC            | 0.431               | 0.470         | 0.488 |
 | MCC            | 0.000               | -0.066        | 0.017 |
 
-[Orange screenshot: `test_score.png`]
+![Results for each model](https://github.com/FiratUniversity-FerhatUcarsLAB/ymt5270-arasinav-projesi-MohammedAbduljalil/blob/main/img/test%20and%20score.png?raw=true)
 
 #### Evaluation Visualizations
 The following visualizations were created to evaluate and interpret model performance:
@@ -118,7 +117,18 @@ The following visualizations were created to evaluate and interpret model perfor
 2. **Feature Ranking (via Rank Widget)**:
    - **Description**: Feature importance was visualized using Orange’s “Rank” widget, which ranks features based on their predictive power.
    - **Comment**: [Interpret, e.g., Features like ZM HL PCT and ZM OC PCT were ranked highest, suggesting that intraday volatility and daily price changes are key drivers of predictions.]
-   - [Image: `feature_rank.png`]
+   
+## Here are the the confusion metrics for each used model
+1. **Random forest confusion matrix**:
+ ![confusion matrix for RandomForest](https://github.com/FiratUniversity-FerhatUcarsLAB/ymt5270-arasinav-projesi-MohammedAbduljalil/blob/main/img/random%20forest%20CM.png?raw=true)
+
+2. **Logistic Regresion confusion matrix**:
+
+
+
+3. **SVR confusion matrix**:
+
+
 
 ### Interpretation of Results
 - **Strengths**: Logistic Regression achieved the highest accuracy (58.6%), followed closely by SVM (57.5%). SVM also showed the highest precision (0.528) and AUC (0.488), indicating better discriminative ability compared to the other models. Random Forest had a balanced F1 score (0.485), suggesting it handles the trade-off between precision and recall relatively well.
