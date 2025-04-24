@@ -64,17 +64,17 @@ The following preprocessing steps were applied to the dataset:
 #### Visualization 1: Time Series distribution 
 - **Description**: Zoom’s closing prices (Close) over time were visualized using Orange’s “Line Plot” widget.
 - **Comment**: The plot shows a sharp rise in Zoom’s prices after March 2020 (pandemic period), followed by fluctuations, reflecting increased demand for Zoom during the pandemic.
-- [Image: `time_series_plot.png`]
+- ![Distribution of the data](https://github.com/FiratUniversity-FerhatUcarsLAB/ymt5270-arasinav-projesi-MohammedAbduljalil/blob/main/img/distribution.png?raw=true)
 
 #### Visualization 2:Data Ranking
 - **Description**: Pearson correlation coefficients between features were visualized as a heatmap using Orange’s “Correlations” widget.
 - **Comment**: High correlations (~0.98) were observed between Close, Open, High, and Low features, as expected in financial data. ZM Volume showed low correlation (~0.2) with price features, indicating that volume does not directly explain price movements.
-- [Image: `correlation_heatmap.png`]
+- ![Data Ranking of the dataset](https://github.com/FiratUniversity-FerhatUcarsLAB/ymt5270-arasinav-projesi-MohammedAbduljalil/blob/main/img/rank.png?raw=true)
 
 ### Feature Relationships
 - **Correlation Analysis**: The correlation matrix summarizes feature relationships. Notably, ZM HL PCT and ZM OC PCT exhibit a moderate correlation (~0.45), suggesting that intraday volatility is related to daily price changes.
 - **Tree viewer**: Relationships between Close, ZM Volume, and Label (2D) were explored using Orange’s “Scatter Plot Matrix” widget. No clear separation was observed between Label (2D) classes, posing challenges for classification.
-- [Image: `scatter_plot_matrix.png`]
+- ![Tree viewer of the data](https://github.com/FiratUniversity-FerhatUcarsLAB/ymt5270-arasinav-projesi-MohammedAbduljalil/blob/main/img/tree%20viewer.png?raw=true)
 
 ## Machine Learning Application
 
