@@ -49,7 +49,7 @@ Basic statistics for the training set were calculated using Orange’s “Data I
 - **ZM HL PCT**: Mean: ~0.054, Median: ~0.046, Standard Deviation: ~0.028
 - **Label (2D)**: 0: ~60%, 1: ~40% (indicating class imbalance)
 
-[Orange screenshot: `statistics_table.png`]
+![feature statistics](https://github.com/FiratUniversity-FerhatUcarsLAB/ymt5270-arasinav-projesi-MohammedAbduljalil/blob/main/img/feature%20stat.png?raw=true)
 
 ### Data Preprocessing
 The following preprocessing steps were applied to the dataset:
@@ -61,19 +61,19 @@ The following preprocessing steps were applied to the dataset:
 
 ### Visualizations
 
-#### Visualization 1: Time Series Plot
+#### Visualization 1: Time Series distribution 
 - **Description**: Zoom’s closing prices (Close) over time were visualized using Orange’s “Line Plot” widget.
 - **Comment**: The plot shows a sharp rise in Zoom’s prices after March 2020 (pandemic period), followed by fluctuations, reflecting increased demand for Zoom during the pandemic.
 - [Image: `time_series_plot.png`]
 
-#### Visualization 2: Correlation Matrix
+#### Visualization 2:Data Ranking
 - **Description**: Pearson correlation coefficients between features were visualized as a heatmap using Orange’s “Correlations” widget.
 - **Comment**: High correlations (~0.98) were observed between Close, Open, High, and Low features, as expected in financial data. ZM Volume showed low correlation (~0.2) with price features, indicating that volume does not directly explain price movements.
 - [Image: `correlation_heatmap.png`]
 
 ### Feature Relationships
 - **Correlation Analysis**: The correlation matrix summarizes feature relationships. Notably, ZM HL PCT and ZM OC PCT exhibit a moderate correlation (~0.45), suggesting that intraday volatility is related to daily price changes.
-- **Scatter Plot Matrix**: Relationships between Close, ZM Volume, and Label (2D) were explored using Orange’s “Scatter Plot Matrix” widget. No clear separation was observed between Label (2D) classes, posing challenges for classification.
+- **Tree viewer**: Relationships between Close, ZM Volume, and Label (2D) were explored using Orange’s “Scatter Plot Matrix” widget. No clear separation was observed between Label (2D) classes, posing challenges for classification.
 - [Image: `scatter_plot_matrix.png`]
 
 ## Machine Learning Application
@@ -155,44 +155,6 @@ The Orange workflow was designed to load, preprocess, analyze, and model the Zoo
 ### Workflow Interpretation
 The workflow effectively combines data preprocessing, exploratory analysis, modeling, and evaluation. The use of “Rank” and “Distributions” widgets enhances understanding of feature importance and data characteristics, guiding model selection. The inclusion of multiple models (Random Forest, SVM, Logistic Regression) allows for comparative analysis, while the “Confusion Matrix” provides a detailed view of classification performance. The small test set size (4 rows) limits robust evaluation, but the workflow provides a solid foundation for further experimentation.
 
-# YMT5270 Ara Sınav Projesi: Orange ile Veri Analizi ve Makine Öğrenmesi
-
-## Öğrenci Bilgileri
-- **Ad Soyad**: 
-- **Öğrenci Numarası**: 
-- **E-posta**: 
-
-## Proje Özeti
-> *Bu bölümde projenizin genel bir özetini yazınız. Hangi veri setini neden seçtiğinizi, hangi analiz yöntemlerini uyguladığınızı ve genel sonuçlarınızı kısaca açıklayınız (150-250 kelime).*
-
-## Veri Seti
-### Veri Seti Bilgileri
-- **Veri Seti Adı**: 
-- **Kaynak**: *(URL veya referans)*
-- **Lisans**: *(Eğer belirtilmişse)*
-- **Veri Seti Boyutu**: *(örn. 500 satır, 10 sütun)*
-
-### Veri Seti Tanımı
-> *Veri setinin içeriğini detaylı olarak açıklayınız. Hangi öznitelikleri içerdiği, verilerin nasıl toplandığı, olası sınırlılıkları gibi bilgileri buraya yazınız.*
-
-### Öznitelik Açıklamaları
-| Öznitelik Adı | Veri Tipi | Açıklama | Örnek Değer |
-|---------------|-----------|----------|-------------|
-| Örnek Öznitelik 1 | Sayısal | İlgili açıklama | 42.5 |
-| Örnek Öznitelik 2 | Kategorik | İlgili açıklama | "Evet" |
-| ... | ... | ... | ... |
-
-## Keşifsel Veri Analizi (Explanatory Data Analysis - EDA)
-### Temel İstatistikler
-> *Veri setine ait temel istatistikleri (ortalama, medyan, standart sapma, vb.) buraya ekleyiniz. Orange'dan alınan ekran görüntüleri ile destekleyebilirsiniz.*
-
-### Veri Ön İşleme
-> *Veri setinize uyguladığınız ön işleme adımlarını detaylandırınız:*
-> - *Eksik verilerin nasıl işlendiği*
-> - *Aykırı değerlerin tespiti ve işlenmesi*
-> - *Veri normalizasyonu/standardizasyonu*
-> - *Kategorik verilerin kodlanması*
-> - *Diğer ön işleme adımları*
 
 ### Görselleştirmeler
 > *Orange ile yaptığınız veri görselleştirmelerini buraya ekleyiniz. Her görselleştirme için kısa bir açıklama yazınız. Görselleri bu repoya yükleyip, markdown içinde referans verebilirsiniz.*
