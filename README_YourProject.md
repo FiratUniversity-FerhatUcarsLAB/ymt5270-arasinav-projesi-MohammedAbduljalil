@@ -124,10 +124,10 @@ The following visualizations were created to evaluate and interpret model perfor
 
 2. **Logistic Regresion confusion matrix**:
 
-
+  ![LOGISTIC REGRESSION CON_MATR](https://github.com/FiratUniversity-FerhatUcarsLAB/ymt5270-arasinav-projesi-MohammedAbduljalil/blob/main/img/log%20reg%20cm.png?raw=true)
 
 3. **SVR confusion matrix**:
-
+  ![SVR CON_MATR](https://github.com/FiratUniversity-FerhatUcarsLAB/ymt5270-arasinav-projesi-MohammedAbduljalil/blob/main/img/SVM%20cm.png?raw=true)
 
 
 ### Interpretation of Results
@@ -160,60 +160,11 @@ The Orange workflow was designed to load, preprocess, analyze, and model the Zoo
 - **Data Visualization**:
   - “Data Table” widgets were used to view the raw data and predictions, providing a tabular view of inputs and outputs.
 
-[Orange workflow screenshot: `orange_workflow.png`]
+  ![The prediction of the model]
 
 ### Workflow Interpretation
 The workflow effectively combines data preprocessing, exploratory analysis, modeling, and evaluation. The use of “Rank” and “Distributions” widgets enhances understanding of feature importance and data characteristics, guiding model selection. The inclusion of multiple models (Random Forest, SVM, Logistic Regression) allows for comparative analysis, while the “Confusion Matrix” provides a detailed view of classification performance. The small test set size (4 rows) limits robust evaluation, but the workflow provides a solid foundation for further experimentation.
 
-
-### Görselleştirmeler
-> *Orange ile yaptığınız veri görselleştirmelerini buraya ekleyiniz. Her görselleştirme için kısa bir açıklama yazınız. Görselleri bu repoya yükleyip, markdown içinde referans verebilirsiniz.*
-
-#### Görselleştirme 1: [Görselleştirme Adı]
-![Görselleştirme 1 Açıklaması](goruntuler/gorselleştirme1.png)
-> *Bu görselleştirme ile ilgili yorumunuz ve çıkarımlarınız.*
-
-#### Görselleştirme 2: [Görselleştirme Adı]
-![Görselleştirme 2 Açıklaması](goruntuler/gorselleştirme2.png)
-> *Bu görselleştirme ile ilgili yorumunuz ve çıkarımlarınız.*
-
-### Öznitelik İlişkileri
-> *Öznitelikler arasındaki ilişkileri analiz ediniz. Korelasyon matrisi, scatter plot matrisi gibi görsellerle destekleyiniz.*
-
-## Makine Öğrenmesi Uygulaması
-### Kullanılan Yöntem
-> *Veri setinize uyguladığınız makine öğrenmesi yöntemini (sınıflandırma, regresyon veya kümeleme) belirtiniz ve neden bu yöntemi seçtiğinizi açıklayınız.*
-
-### Modeller ve Parametreler
-> *Denediğiniz modelleri ve kullandığınız parametreleri açıklayınız. Orange'da yapılandırdığınız widget ayarlarını ekran görüntüleri ile destekleyebilirsiniz.*
-
-### Model Değerlendirmesi
-> *Uyguladığınız modelin performansını değerlendiriniz. Kullandığınız değerlendirme metriklerini açıklayınız.*
-
-#### Metrikler
-| Metrik | Değer |
-|--------|-------|
-| Örnek Metrik 1 | 0.85 |
-| Örnek Metrik 2 | 0.78 |
-| ... | ... |
-
-### Sonuçların Yorumlanması
-> *Elde ettiğiniz sonuçları detaylı bir şekilde yorumlayınız. Modelin güçlü ve zayıf yönleri nelerdir? Başka hangi modeller denenebilirdi?*
-
-## Orange İş Akışı
-> *Orange ile oluşturduğunuz iş akışı görselini buraya ekleyiniz. İş akışınızın adımlarını kısaca açıklayınız.*
-
-![Orange İş Akışı](goruntuler/is_akisi.png)
-
-## Sonuç ve Öneriler
-> *Projenizin genel bir değerlendirmesini yapınız. Elde ettiğiniz sonuçlar hakkında çıkarımlarınızı ve gelecek çalışmalar için önerilerinizi yazınız.*
-
-## Kaynaklar
-> *Proje boyunca yararlandığınız kaynakları (makaleler, web siteleri, videolar, vb.) buraya ekleyiniz.*
-
-1. Kaynak 1
-2. Kaynak 2
-3. ...
 
 ## Ekler
 ### Orange Proje Dosyası
@@ -221,7 +172,4 @@ The workflow effectively combines data preprocessing, exploratory analysis, mode
 > 
 > [Proje_Dosyasi.ows](proje_dosyasi.ows)
 
-### Veri Seti Dosyası veya Bağlantısı
-> *Kullandığınız veri setini bu repoya yükleyebilir veya bağlantısını burada paylaşabilirsiniz.*
->
 > [Veri_Seti.csv](veri_seti.csv) veya [Veri Seti Bağlantısı](https://ornek-veri-seti-baglantisi.com)
