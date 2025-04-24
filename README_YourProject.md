@@ -9,7 +9,7 @@
 This project encompasses data analysis and machine learning applications on historical stock price data of Zoom (ZM). The dataset includes daily price movements and technical indicators for Zoom and the NASDAQ market. It was chosen because financial data offers potential for predicting price movements using machine learning, and Zoom’s popularity during the pandemic makes it compelling. Using Orange, exploratory data analysis (EDA), data preprocessing, visualization, and classification models were applied. Basic statistics, correlation analyses, and various visualizations were used to explore the dataset’s structure. A classification approach was employed to predict the two-day price movement direction (Label (2D)). Random Forest, SVM, and Logistic Regression models were tested, with performance evaluated using metrics like accuracy and F1 score. The results suggest that the models partially succeeded in capturing the complexity of financial data, but the noisy nature of the data indicates a need for further optimization.
 ## Final project shape
 Here is the final shape of the orange project
-![Orange Workflow Screenshot]([img/image.png](https://github.com/FiratUniversity-FerhatUcarsLAB/ymt5270-arasinav-projesi-MohammedAbduljalil/blob/main/img/image.png?raw=true))
+![Orange Workflow Screenshot](https://github.com/FiratUniversity-FerhatUcarsLAB/ymt5270-arasinav-projesi-MohammedAbduljalil/blob/main/img/image.png?raw=true)
 ## Data Set
 
 ### Data Set Information
