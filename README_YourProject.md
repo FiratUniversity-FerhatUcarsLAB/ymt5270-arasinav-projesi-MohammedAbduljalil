@@ -166,10 +166,10 @@ The Orange workflow was designed to load, preprocess, analyze, and model the Zoo
 The workflow effectively combines data preprocessing, exploratory analysis, modeling, and evaluation. The use of “Rank” and “Distributions” widgets enhances understanding of feature importance and data characteristics, guiding model selection. The inclusion of multiple models (Random Forest, SVM, Logistic Regression) allows for comparative analysis, while the “Confusion Matrix” provides a detailed view of classification performance. The small test set size (4 rows) limits robust evaluation, but the workflow provides a solid foundation for further experimentation.
 
 
-## Ekler
-### Orange Proje Dosyası
+## Index
+### The link for the Orange Project
 > *Orange proje dosyanızı (.ows) bu repoya yükleyiniz ve buradan referans veriniz.*
 > 
-> [Proje_Dosyasi.ows](project/mid term exam.ows)
+> [project link]([project/mid term exam.ows](https://github.com/FiratUniversity-FerhatUcarsLAB/ymt5270-arasinav-projesi-MohammedAbduljalil/blob/main/project/mid%20term%20exam.ows))
 
-> [Veri_Seti.csv](project/ZM Historical Data - Train.csv) veya [Veri Seti Bağlantısı](project/ZM Historical Data - Test.csv)
+> [train dataset]([project/ZM Historical Data - Train.csv](https://github.com/FiratUniversity-FerhatUcarsLAB/ymt5270-arasinav-projesi-MohammedAbduljalil/blob/main/project/ZM%20Historical%20Data%20-%20Train.csv)) and [test dataset](https://github.com/FiratUniversity-FerhatUcarsLAB/ymt5270-arasinav-projesi-MohammedAbduljalil/blob/main/project/ZM%20Historical%20Data%20-%20Test.csv)
