@@ -160,7 +160,7 @@ The Orange workflow was designed to load, preprocess, analyze, and model the Zoo
 - **Data Visualization**:
   - “Data Table” widgets were used to view the raw data and predictions, providing a tabular view of inputs and outputs.
 
-  ![The prediction of the model]
+  ![The prediction of the model](https://github.com/FiratUniversity-FerhatUcarsLAB/ymt5270-arasinav-projesi-MohammedAbduljalil/blob/main/img/preicted.png?raw=true)
 
 ### Workflow Interpretation
 The workflow effectively combines data preprocessing, exploratory analysis, modeling, and evaluation. The use of “Rank” and “Distributions” widgets enhances understanding of feature importance and data characteristics, guiding model selection. The inclusion of multiple models (Random Forest, SVM, Logistic Regression) allows for comparative analysis, while the “Confusion Matrix” provides a detailed view of classification performance. The small test set size (4 rows) limits robust evaluation, but the workflow provides a solid foundation for further experimentation.
@@ -170,6 +170,6 @@ The workflow effectively combines data preprocessing, exploratory analysis, mode
 ### Orange Proje Dosyası
 > *Orange proje dosyanızı (.ows) bu repoya yükleyiniz ve buradan referans veriniz.*
 > 
-> [Proje_Dosyasi.ows](proje_dosyasi.ows)
+> [Proje_Dosyasi.ows](project/mid term exam.ows)
 
-> [Veri_Seti.csv](veri_seti.csv) veya [Veri Seti Bağlantısı](https://ornek-veri-seti-baglantisi.com)
+> [Veri_Seti.csv](project/ZM Historical Data - Train.csv) veya [Veri Seti Bağlantısı](project/ZM Historical Data - Test.csv)
